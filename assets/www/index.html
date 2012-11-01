@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>nomofoto</title>
-<!--<link type="text/css" rel="stylesheet/less" href="src/css/style.less">-->
-<!--<script src="src/js/lib/less/less.js"></script>-->
 <head>
-    <title></title>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+  <title>foto</title>
 </head>
 <body>
+<script src="src/cordova-2.1.0"></script>
 <script src="src/js/lib/requirejs/require.js"></script>
 <script>
-    require.config({
-        paths: {
-            'root': 'src/js',
-            'class': 'src/js/lib/class/class',
-            '$': 'src/js/lib/jquery/jquery',
-            'handlebars': 'src/js/lib/handlebars/handlebars',
-            'logger': 'src/js/lib/logger/logger'
-        }
-    });
-    require(['root/picset']);
+  require.config({
+    paths: {
+      'root': 'src/js',
+      'class': 'src/js/lib/class/class',
+      '$': 'src/js/lib/jquery/jquery',
+      'handlebars': 'src/js/lib/handlebars/handlebars',
+      'logger': 'src/js/lib/logger/logger'
+    }
+  });
+  require(['root/picset']);
 </script>
 </body>
 </html>

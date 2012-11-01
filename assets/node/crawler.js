@@ -1,16 +1,16 @@
 var Crawler = require("crawler").Crawler;
 
 var c = new Crawler({
-    "maxConnections": 10,
+  "maxConnections": 10,
 
-    // This will be called for each crawled page
-    "callback": function(error, result, $) {
+  // This will be called for each crawled page
+  "callback": function(error, result, $) {
 
-        // $ is a jQuery instance scoped to the server-side DOM of the page
+    // $ is a jQuery instance scoped to the server-side DOM of the page
 //    $("#content a:link").each(function(a) {
 //      c.queue(a.href);
 //    });
-    }
+  }
 });
 
 // Queue just one URL, with default callback
@@ -21,21 +21,14 @@ c.queue("http://phoot.163.com/qatest2");
 
 // Queue URLs with custom callbacks & parameters
 c.queue([
-    {
-        "uri": "http://photo.163.com/qatest2",
-        "jQuery": false,
+  {
+    "uri": "http://photo.163.com/qatest2",
+    "jQuery": false,
 
-        // The global callback won't be called
-        "callback": function(error, result) {
-            console.log(result.body);
+    // The global callback won't be called
+    "callback": function(error, result) {
+      console.log(result.body);
 //      console.log("Grabbed", result.body.length, "bytes");
-        }
     }
-]);
-return;
-// Queue some HTML code directly without grabbing (mostly for tests)
-c.queue([
-    {
-        "html": "<p>This is a <strong>test</strong></p>"
-    }
+  }
 ]);
