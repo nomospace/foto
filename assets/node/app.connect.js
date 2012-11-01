@@ -52,4 +52,4 @@ app.use("/proxy", function(req, res) {
 app.use(connect.static(path.join(__dirname, "www"), { maxAge: 0 }));
 
 app.listen(8001);
-console.log("Server is launching at http://localhost:8001");
+console.log("Server is launching at http://localhost:8001/");

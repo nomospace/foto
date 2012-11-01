@@ -2,7 +2,13 @@ define(function(require) {
   'use strict';
 
   var $ = require('$');
-  $.getJSON('http://127.0.0.1:8001/proxy').done(function(result) {
+  $.support.cors = true;
+  $.getJSON({
+      url: 'http://127.0.0.1:8001/proxy'
+    },
+    headers: {
+      'Access-Control-Allow-Origin': 'http://127.0.0.1:8001/'
+  }).done(function(result) {
       alert(result);
     });
   return;
