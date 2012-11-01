@@ -1,6 +1,11 @@
 define(function(require) {
-  var $ = require('$');
+  'use strict';
 
+  var $ = require('$');
+  $.getJSON('http://127.0.0.1:8001/proxy').done(function(result) {
+      alert(result);
+    });
+  return;
   $.ajax({
     'type': 'post',
     'url': 'http://photo.163.com/share/jinlu_hz/dwr/call/plaincall/PictureSetBean.getPictureSetsWithCover.dwr',
